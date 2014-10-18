@@ -6,16 +6,20 @@ using System;
 public class Core : MonoBehaviour {
 
     private static ResourcesManager resourcesManager; //менеджер ресурсов
+    private static GuiControllerBase guiController;
 
     public static ResourcesManager getResourcesManager()
     {
         return resourcesManager;
     }
 
+
     //Инициализация игры
 	void Start () {
         resourcesManager = new ResourcesManager();
         resourcesManager.initialize();
+        guiController = new MainScreenGUIController();
+        guiController.initialize();
         test();
 	}
 
@@ -25,11 +29,10 @@ public class Core : MonoBehaviour {
 	
     //Тут будет обновление глобального игрового состояния
 	void Update () {
-    
-	
 	}
 
     void OnGUI() {
-        GUI.Box(new Rect(0, 0, 100, 100), "");
+        guiController.update();
+        GUI.Box(new Rect(0, 0, 100, 100), "" + Input.mousePosition.x + " " + Input.mousePosition.y);
     }
 }

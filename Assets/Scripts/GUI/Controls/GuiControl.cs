@@ -19,4 +19,9 @@ public abstract class GuiControl
     //Дополнительная обработка
     protected void logicUpdate()
     { }
+
+    protected void setPosition(float x,float y, float width, float height)
+    {
+        position = new Rect(x * Screen.width, y * Screen.height, width * Screen.width, height * Screen.height);
+    }
 }

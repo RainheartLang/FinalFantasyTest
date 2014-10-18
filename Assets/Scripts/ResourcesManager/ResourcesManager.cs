@@ -7,6 +7,8 @@ public class ResourcesManager {
 
     private const string TEXTURES_PATH = "Textures/";
 
+    private const string SKINS_PATH =    "UI/";
+
     private Dictionary<Type, ResourceContainer> resourceContainers;  //список контейнеров ресурсов
 
     //инициализация, здесь добавляем все нужные контейнеры
@@ -15,6 +17,8 @@ public class ResourcesManager {
         this.resourceContainers = new Dictionary<Type, ResourceContainer>();
 
         this.resourceContainers.Add(typeof(Texture2D), new ResourceContainer(typeof(Texture2D)));
+
+        this.resourceContainers.Add(typeof(GUISkin), new ResourceContainer(typeof(GUISkin)));
     }
 
     //Общий метод загрузки ресурса
@@ -55,6 +59,11 @@ public class ResourcesManager {
     public Texture2D getTexture(String fileName)
     {
         return loadResource<Texture2D>(TEXTURES_PATH + fileName);
+    }
+
+    public GUISkin getSkin(String fileName)
+    {
+        return loadResource<GUISkin>(SKINS_PATH + fileName);
     }
 
 }
