@@ -49,11 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Core.cs" />
-    <Compile Include="Assets\Scripts\GUI\Controllers\GuiControllerBase.cs" />
-    <Compile Include="Assets\Scripts\GUI\Controllers\MainScreenGUIController.cs" />
-    <Compile Include="Assets\Scripts\GUI\Controls\Background.cs" />
-    <Compile Include="Assets\Scripts\GUI\Controls\GuiControl.cs" />
-    <Compile Include="Assets\Scripts\GUI\Controls\Icon.cs" />
+    <Compile Include="Assets\Scripts\GUI\GuiControl.cs" />
+    <Compile Include="Assets\Scripts\GUI\GuiControllerBase.cs" />
+    <Compile Include="Assets\Scripts\GUI\Icon.cs" />
     <Compile Include="Assets\Scripts\GUI\StylesList.cs" />
     <Compile Include="Assets\Scripts\ResourcesManager\ResourceContainer.cs" />
     <Compile Include="Assets\Scripts\ResourcesManager\ResourcesManager.cs" />
