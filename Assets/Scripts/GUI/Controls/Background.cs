@@ -11,6 +11,7 @@ public class Background : GuiControl {
 
     public Background(Color c)
     {
+        initialize();
         this.color = c;
         this.texture = Core.getResourcesManager().getTexture(TEXTURE_NAME);
         if (style == null)

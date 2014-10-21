@@ -3,12 +3,21 @@ using System.Collections;
 
 public class MainScreenGUIController : GuiControllerBase {
 
+    private enum ID : int {BACKGROUND = 0, TITLE = 1};
 
     public override void initialize()
     {
-        this.controls.Add(new Background(Color.white));
-        float titleWidth = 0.550f;
-        float titleHeight = 0.300f;
-        this.controls.Add(new Icon("final fantasy", 0.5f - (titleWidth / 2), 0.5f - (titleHeight / 2), titleWidth, titleHeight));
+
+        GuiControl control = new Background(Color.white);
+        control.setId(1);
+        control.setVisible();
+        add(control.getId(), control);
+
+        control = new Icon("final fantasy", 0.5f, 0.5f, 1f, 1f);
+        control.setId(2);
+        control.setVisible();
+        add(control.getId(), control);
+
+
     }
 }

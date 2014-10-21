@@ -34,5 +34,6 @@ public class Core : MonoBehaviour {
     void OnGUI() {
         guiController.update();
         GUI.Box(new Rect(0, 0, 100, 100), "" + Input.mousePosition.x + " " + Input.mousePosition.y);
+        //GUI.Box(new Rect(0,0,100,100), resourcesManager.getTexture("final fantasy"));
     }
 }
